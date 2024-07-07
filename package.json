@@ -1,0 +1,64 @@
+{
+  "name": "electron-auto-update-demo",
+  "productName": "electron-auto-update-demo",
+  "version": "1.0.4",
+  "directories": {
+    "output": "dist/1.0.4"
+  },
+  "description": "My Electron application description",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^31.1.0"
+  },
+  "keywords": [],
+  "author": "MS",
+  "license": "MIT",
+  "dependencies": {
+    "electron-dl": "^4.0.0",
+    "electron-log": "^5.1.5",
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-updater": "^6.2.1"
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "productName": "Your App Name",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": [
+        "squirrel",
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ]
+    }
+  }
+}

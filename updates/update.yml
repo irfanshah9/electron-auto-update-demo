@@ -1,0 +1,12 @@
+version: 1.0.4
+releaseDate: 2024-08-12
+notes: |
+  - Added feature X
+  - Improved performance
+  - Bug fixes
+
+packages:
+  - url: http://localhost:8080/out/make/squirrel.windows/x64/electron-auto-update-demo-1.0.4 Setup.exe
+    sha512: 401d1fbd7ca21271f40fc0a54e6a8d6cc9441bc2c35e4535599f238b140f25ac4c9991a7d0ee4e69b4f34161ac55e01bb7ebbeeb792f30961b40a8058534413c
+    size: 103MB
+    // Other optional fields like "pub_date" or "description"
